@@ -19,7 +19,8 @@ ITEM_PIPELINES = {
 }
 DB_SERVER = 'MySQLdb'  # For detail, please see twisted doc
 DB_CONNECT = {
-    'db': 'test',  # Your db
+    #'db': 'test',  # Your db
+	'db':'iproject',
     'user': 'root',  #
     'passwd': 'root',  #
     'host': 'localhost',  # Your Server

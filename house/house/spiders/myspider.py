@@ -15,9 +15,7 @@ class MySpider(scrapy.Spider):
                 "//ul[@class='list-style1']//div[@class='info-title']/a[@class='list-info-title js-title']/@href").extract():
             siteurl = 'http://' + self.allowed_domains[0] + str(i)
             yield scrapy.Request(siteurl, callback=self.parseItem)
-        while True:
-            time.sleep(1800)
-            yield scrapy.Request(self.start_urls[0], callback=self.parse)
+
 
     def parseItem(self, response):
         houseitems = HouseItem()
