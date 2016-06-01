@@ -1,0 +1,14 @@
+CREATE TABLE houseitem (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  website varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  title varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  money int(16) DEFAULT NULL,
+  village varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  location varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  setting text COLLATE utf8_bin,
+  owner varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  nowtime varchar(64) COLLATE utf8_bin DEFAULT NULL,
+  size varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  room varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
