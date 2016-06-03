@@ -1,0 +1,12 @@
+CREATE TABLE `sis` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '片名',
+  `site` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '网页',
+  `seedurl` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '种子链接',
+  `likes` int(8) DEFAULT NULL COMMENT '赞',
+  `fileattr` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '格式',
+  `type` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '分类',
+  `size` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '大小',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `seedurl` (`seedurl`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin

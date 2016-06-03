@@ -16,4 +16,4 @@ class Sis001Item(scrapy.Item):
     fileattr = scrapy.Field()  # 格式
     type = scrapy.Field()  # 分类
     size = scrapy.Field()  # 大小
-    filetime = scrapy.Field()  # 时长
+
