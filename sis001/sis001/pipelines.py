@@ -6,8 +6,8 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-class SisPipeline(object):
+class Sis001Pipeline(object):
     def process_item(self, item, spider):
         for p in item:
-            print p['site']
+            print p
         return item

@@ -8,8 +8,7 @@
 import scrapy
 
 
-class SisItem(scrapy.Item):
-    # define the fields for your item here like:
+class Sis001Item(scrapy.Item):
     title = scrapy.Field()  # 片名
     site = scrapy.Field()  # 网页
     seedurl = scrapy.Field()  # 种子链接
@@ -18,4 +17,3 @@ class SisItem(scrapy.Item):
     type = scrapy.Field()  # 分类
     size = scrapy.Field()  # 大小
     filetime = scrapy.Field()  # 时长
-    pass
