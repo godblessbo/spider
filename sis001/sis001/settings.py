@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for sis001 project
-#
-# For simplicity, this file contains only settings considered important or
-# commonly used. You can find more settings consulting the documentation:
-#
-#     http://doc.scrapy.org/en/latest/topics/settings.html
-#     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
 BOT_NAME = 'sis001'
-
 SPIDER_MODULES = ['sis001.spiders']
 NEWSPIDER_MODULE = 'sis001.spiders'
+ITEM_PIPELINES = {
+   'sis001.pipelines.Sis001Pipeline': 300,
+  #  'scrapy.pipelines.images.ImagesPipeline': 1,
+}
 
+# IMAGES_STORE = 'E:/Code/Spider/sis001/file'
+# IMAGES_MIN_HEIGHT = 110
+# IMAGES_MIN_WIDTH = 110
+
+# 需要下载图片时，取消上面#号，取消items#号，取消spider里面image_url#号，pipelines里面class中object换为ImagesPipeline
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'sis001 (+http://www.yourdomain.com)'
@@ -25,9 +25,8 @@ ROBOTSTXT_OBEY = True
 #CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
-# See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
-# See also autothrottle settings and docs
 DOWNLOAD_DELAY = 3
+
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -64,9 +63,6 @@ DOWNLOAD_DELAY = 3
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'sis001.pipelines.Sis001Pipeline': 300,
-}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

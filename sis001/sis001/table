@@ -7,6 +7,10 @@ CREATE TABLE `sis` (
   `fileattr` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '格式',
   `type` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '分类',
   `size` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '大小',
+  `translation` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '翻译',
+  `time` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '发布时间',
+  `downtimes` int(8) COLLATE utf8_bin DEFAULT NULL COMMENT '下载次数',
+  `page` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '当前页',
   PRIMARY KEY (`id`),
   UNIQUE KEY `seedurl` (`seedurl`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
